@@ -1,0 +1,275 @@
+/* Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Container */
+  .modal-content {
+    background: white;
+    border-radius: 12px;
+    width: 1000px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    max-height: 70vh;
+    overflow-y: auto;
+    position: relative; /* Ensure modal content is a positioning context */
+    overflow: visible; /* Allow dropdowns to overflow the modal */
+  }
+  
+  .modal-content.open {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Header */
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .close-button:hover {
+    color: #1a1a1a;
+    transform: scale(1.1);
+  }
+  
+  /* Sections */
+  .modal-section {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+    position: relative; /* Ensure sections are a positioning context */
+  }
+  
+  .modal-section.no-border {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+  }
+  
+  .modal-section:last-child {
+    border-bottom: none;
+  }
+  
+  .modal-section h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+  
+  /* Custom DMS Section */
+  .custom-dms-section {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .custom-dms-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Card Content (Icon on Left) */
+  .card-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+  }
+  
+  /* Custom Report Card */
+  .custom-report-card {
+    position: relative;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    max-width: 250px;
+    margin: 0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1; /* Base z-index for cards */
+  }
+  
+  .custom-report-card:hover {
+    background-color: #f1f3f5;
+    transform: translateY(-2px);
+  }
+  
+  .custom-report-card.open {
+    border-color: #4839AC;
+    background-color: #e6e6ff;
+    z-index: 1001; /* Higher z-index when open to ensure dropdown is on top */
+  }
+  
+  .custom-report-card i {
+    font-size: 30px;
+    color: #4839AC;
+  }
+  
+  .custom-report-card h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+  }
+  
+  .custom-report-card p {
+    margin: 5px 0 0 0;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Grid Layout for Prebuilt Templates */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .grid-item {
+    position: relative;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    z-index: 1; /* Base z-index for cards */
+  }
+  
+  .grid-item:hover {
+    background-color: #f1f3f5;
+    transform: translateY(-2px);
+  }
+  
+  .grid-item.open {
+    border-color: #4839AC;
+    background-color: #e6e6ff;
+    z-index: 1001; /* Higher z-index when open to ensure dropdown is on top */
+  }
+  
+  .grid-item i {
+    font-size: 30px;
+    color: #4839AC;
+  }
+  
+  .grid-item h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+  }
+  
+  .grid-item p {
+    margin: 5px 0 0 0;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Dropdown Trigger */
+  .dropdown-trigger {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .dropdown-trigger i {
+    font-size: 20px;
+    color: #666;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; /* Match the width of the parent card */
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1002; /* Ensure dropdown is above all cards */
+  }
+  
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .dropdown-item:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f1f3f5;
+  }
+  
+  .dropdown-item i {
+    font-size: 20px;
+    color: #666;
+  }
+  
+  .dropdown-item-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dropdown-item-content span {
+    font-size: 14px;
+    color: #1a1a1a;
+  }
+  
+  .dropdown-item-content p {
+    margin: 0;
+    font-size: 12px;
+    color: #999;
+  }
