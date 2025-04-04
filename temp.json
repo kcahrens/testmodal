@@ -1,1 +1,2 @@
-{"homepage": "https://kcahrens.github.io/newreportmodal", "scripts": {"predeploy": "npm run build", "deploy": "gh-pages -d build"}}
+{"homepage": "https://kcahrens.github.io/testmodal", "scripts": {"predeploy": "npm run build", "deploy": "gh-pages -d build"}}
+
