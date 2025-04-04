@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/testmodal/static/css/main.ba99809a.css",
+    "main.js": "/testmodal/static/js/main.ebd6a2fa.js",
+    "static/js/453.b089195c.chunk.js": "/testmodal/static/js/453.b089195c.chunk.js",
+    "static/media/Revenue.png": "/testmodal/static/media/Revenue.b67959013795e4b0432b.png",
+    "static/media/LegacySaleReportDMS.png": "/testmodal/static/media/LegacySaleReportDMS.44e7bb58f861e9137318.png",
+    "static/media/LegacySalesbyOpcode.png": "/testmodal/static/media/LegacySalesbyOpcode.6cc8e96504d7e0037ef4.png",
+    "static/media/AdvisorPerformanceCP.png": "/testmodal/static/media/AdvisorPerformanceCP.678501d3e57131c5d197.png",
+    "static/media/OPCodeAnalysisReport.png": "/testmodal/static/media/OPCodeAnalysisReport.39658505ae6c90f949a8.png",
+    "static/media/EffectiveLaborRate.png": "/testmodal/static/media/EffectiveLaborRate.2264658d6a85a8b9f93d.png",
+    "static/media/SACLASSREPORT.png": "/testmodal/static/media/SACLASSREPORT.c1fe730d35cc913cccdd.png",
+    "static/media/Commissions.png": "/testmodal/static/media/Commissions.ee00de8d8bf53404b8e9.png",
+    "static/media/RAP Report.png": "/testmodal/static/media/RAP Report.e7c593c3c7e059a21dcf.png",
+    "static/media/vma.png": "/testmodal/static/media/vma.9baff5d4820a2082b7ad.png",
+    "static/media/vma_dms.png": "/testmodal/static/media/vma_dms.3a14b4497e3e8ffe048e.png",
+    "static/media/Partadvisor.png": "/testmodal/static/media/Partadvisor.19916cc97c8906a8a3ca.png",
+    "static/media/parttech.png": "/testmodal/static/media/parttech.5947a0abbd0f124abd9f.png",
+    "static/media/AdvisorPerformanceReportRR.png": "/testmodal/static/media/AdvisorPerformanceReportRR.fa132e705f67e0be61f5.png",
+    "index.html": "/testmodal/index.html",
+    "main.ba99809a.css.map": "/testmodal/static/css/main.ba99809a.css.map",
+    "main.ebd6a2fa.js.map": "/testmodal/static/js/main.ebd6a2fa.js.map",
+    "453.b089195c.chunk.js.map": "/testmodal/static/js/453.b089195c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba99809a.css",
+    "static/js/main.ebd6a2fa.js"
+  ]
+}
