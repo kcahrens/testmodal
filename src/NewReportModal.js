@@ -157,7 +157,7 @@ const NewReportModal = ({ onClose }) => {
     {
       title: 'Legacy SmartVMA Reports',
       icon: 'ri-history-line',
-      summary: 'Access legacy some of your old favorites.',
+      summary: 'Access some of your old favorites from Legacy.',
       options: [
         { 
           name: 'Custom - Legacy: Sales Report - DMS', 
