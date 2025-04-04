@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './NewReportModal.css';
 
-// Import images from src/pictures/ (updated to .png where applicable)
+// Import images from src/pictures/
 import AdvisorPerformanceCPImage from './pictures/AdvisorPerformanceCP.png';
 import VmaDmsImage from './pictures/vma_dms.png';
 import VmaImage from './pictures/vma.png';
@@ -14,10 +14,8 @@ import LegacySaleReportDMSImage from './pictures/LegacySaleReportDMS.png';
 import LegacySalesByOpcodeImage from './pictures/LegacySalesbyOpcode.png';
 import CommissionsImage from './pictures/Commissions.png';
 import RevenueImage from './pictures/Revenue.png';
-import MPImediaImage from './pictures/MPImedia.png';
 import OPCodeAnalysisReportImage from './pictures/OPCodeAnalysisReport.png';
 import PartAdvisorImage from './pictures/Partadvisor.png';
-// Note: RetentionImage is missing from your directory; commented out below where used
 
 const NewReportModal = ({ onClose }) => {
   const [openCard, setOpenCard] = useState(null);
@@ -48,13 +46,13 @@ const NewReportModal = ({ onClose }) => {
           name: 'Parts Summary by Advisor', 
           icon: 'ri-user-2-line', 
           description: 'View advisor parts sales.',
-          picture: PartAdvisorImage, // Fixed typo: PartadvisorImag -> PartAdvisorImage
+          picture: PartAdvisorImage,
         },
         { 
           name: 'Parts Summary by Technician', 
           icon: 'ri-user-3-line', 
           description: 'View technician parts sales.',
-          picture: PartTechImage, // Corrected to match import
+          picture: PartTechImage,
         },
       ],
     },
@@ -72,8 +70,8 @@ const NewReportModal = ({ onClose }) => {
         { 
           name: 'Menu Sales - VMA + DMS', 
           icon: 'ri-line-chart-line', 
-          description: 'Combined VMA and DMS data, Pro-Tip: Use the unverified & CP Only Filter for VMA only data with a CPRO Count', // Added comma
-          picture: VmaDmsImage, // Corrected to match import
+          description: 'Combined VMA and DMS data, Pro-Tip: Use the unverified & CP Only Filter for VMA only data with a CPRO Count',
+          picture: VmaDmsImage,
         },
       ],
     },
@@ -91,14 +89,13 @@ const NewReportModal = ({ onClose }) => {
         { 
           name: 'BG Revenue', 
           icon: 'ri-money-dollar-box-line', 
-          description: 'BG Revenue report, Configure in the Incentive / Revenue Area', // Added comma
+          description: 'BG Revenue report, Configure in the Incentive / Revenue Area',
           picture: RevenueImage,
         },
         { 
           name: 'Basic BG Op Code Penetration', 
           icon: 'ri-oil-line', 
-          description: 'Uses the BG Labor OP category for a basic CPRO QTY sold Report', // Added comma
-          // No picture specified
+          description: 'Uses the BG Labor OP category for a basic CPRO QTY sold Report',
         },
       ],
     },
@@ -116,31 +113,31 @@ const NewReportModal = ({ onClose }) => {
         { 
           name: 'Advisor Performance Report', 
           icon: 'ri-user-star-line', 
-          description: '3606 Reynolds & Reynolds Report', // Added comma
+          description: '3606 Reynolds & Reynolds Report',
           picture: AdvisorPerformanceReportRRImage,
         },
         { 
           name: 'Advisor Performance - CP', 
           icon: 'ri-user-follow-line', 
-          description: 'Basic Advisor Performance Report with KPIs', // Added comma
+          description: 'Basic Advisor Performance Report with KPIs',
           picture: AdvisorPerformanceCPImage,
         },
         { 
           name: 'OP Code Analysis Report - CP / ADV - OP', 
           icon: 'ri-table-fill', 
-          description: 'Basic Advisor OP code Report', // Added comma
+          description: 'Basic Advisor OP code Report',
           picture: OPCodeAnalysisReportImage,
         },
         { 
           name: 'RAP Report', 
           icon: 'ri-file-chart-2-line', 
-          description: 'Advisor performance Grouped by Pay type', // Added comma
+          description: 'Advisor performance Grouped by Pay type',
           picture: RAPReportImage,
         },
         { 
           name: 'SA-Class Report', 
           icon: 'ri-bar-chart-grouped-line', 
-          description: 'CDK SA-CLASS Report - Basic DMS sales report', // Added comma
+          description: 'CDK SA-CLASS Report - Basic DMS sales report',
           picture: SAClassImage,
         },
       ],
@@ -154,7 +151,6 @@ const NewReportModal = ({ onClose }) => {
           name: 'Retention Report', 
           icon: 'ri-group-line', 
           description: 'Customer retention insights.',
-          // picture: RetentionImage, // Missing from your directory; commented out
         },
       ],
     },
@@ -166,13 +162,13 @@ const NewReportModal = ({ onClose }) => {
         { 
           name: 'Custom - Legacy: Sales Report - DMS', 
           icon: 'ri-file-chart-line', 
-          description: 'Sales Report - DMS | Manager log in report for legacy sites', // Added comma
+          description: 'Sales Report - DMS | Manager log in report for legacy sites',
           picture: LegacySaleReportDMSImage,
         },
         { 
           name: 'Custom - Legacy: Sales by Opcode', 
           icon: 'ri-file-list-3-line', 
-          description: 'Sales by operation code.', // Added comma
+          description: 'Sales by operation code.',
           picture: LegacySalesByOpcodeImage,
         },
       ],
@@ -276,20 +272,17 @@ const NewReportModal = ({ onClose }) => {
                         <span>{option.name}</span>
                         <p>{option.description}</p>
                       </div>
-                      {hoveredOption && 
-                        hoveredOption.reportIndex === 0 && 
-                        hoveredOption.optionIndex === optIndex && 
-                        option.picture && (
-                          <div className="hover-picture">
-                            <img 
-                              src={option.picture} 
-                              alt={option.name} 
-                              onError={(e) => console.error(`Failed to load image: ${option.name}`)} 
-                            />
-                          </div>
-                        )}
                     </div>
                   ))}
+                  {hoveredOption && hoveredOption.reportIndex === 0 && reports[0].options[hoveredOption.optionIndex].picture && (
+                    <div className="hover-picture">
+                      <img 
+                        src={reports[0].options[hoveredOption.optionIndex].picture} 
+                        alt={reports[0].options[hoveredOption.optionIndex].name} 
+                        onError={(e) => console.error(`Failed to load image: ${reports[0].options[hoveredOption.optionIndex].name}`)} 
+                      />
+                    </div>
+                  )}
                 </div>
               )}
             </div>
@@ -334,20 +327,17 @@ const NewReportModal = ({ onClose }) => {
                           <span>{option.name}</span>
                           <p>{option.description}</p>
                         </div>
-                        {hoveredOption && 
-                          hoveredOption.reportIndex === index + 1 && 
-                          hoveredOption.optionIndex === optIndex && 
-                          option.picture && (
-                            <div className="hover-picture">
-                              <img 
-                                src={option.picture} 
-                                alt={option.name} 
-                                onError={(e) => console.error(`Failed to load image: ${option.name}`)} 
-                              />
-                            </div>
-                          )}
                       </div>
                     ))}
+                    {hoveredOption && hoveredOption.reportIndex === index + 1 && report.options[hoveredOption.optionIndex].picture && (
+                      <div className="hover-picture">
+                        <img 
+                          src={report.options[hoveredOption.optionIndex].picture} 
+                          alt={report.options[hoveredOption.optionIndex].name} 
+                          onError={(e) => console.error(`Failed to load image: ${report.options[hoveredOption.optionIndex].name}`)} 
+                        />
+                      </div>
+                    )}
                   </div>
                 )}
               </div>

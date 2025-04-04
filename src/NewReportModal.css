@@ -11,7 +11,8 @@
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Keeps modal higher up */
+  margin-top: 50px; /* Keeps the modal positioned higher */
   z-index: 1000;
 }
 
@@ -280,10 +281,10 @@
 }
 
 /* Hover Picture Styles */
-.hover-picture {
+.dropdown-menu .hover-picture {
   position: absolute;
-  top: 0;
-  left: 100%; /* Default: on the right for left and center columns */
+  top: 0; /* Fixed at the top of the dropdown-menu */
+  left: 100%; /* On the right for left and center columns */
   z-index: 1003;
   background: white;
   border: 1px solid #ccc;
@@ -292,9 +293,9 @@
   padding: 10px;
 }
 
-.right-column .hover-picture {
+.right-column .dropdown-menu .hover-picture {
   left: auto; /* Reset left */
-  right: 100%; /* Position on the left for right column */
+  right: 100%; /* On the left for right column */
 }
 
 .hover-picture img {
