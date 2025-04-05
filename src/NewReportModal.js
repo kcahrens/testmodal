@@ -16,6 +16,7 @@ import CommissionsImage from './pictures/Commissions.png';
 import RevenueImage from './pictures/Revenue.png';
 import OPCodeAnalysisReportImage from './pictures/OPCodeAnalysisReport.png';
 import PartAdvisorImage from './pictures/Partadvisor.png';
+import rr3611report from './pictures/3611report.png';
 
 const NewReportModal = ({ onClose }) => {
   const [openCard, setOpenCard] = useState(null);
@@ -107,8 +108,8 @@ const NewReportModal = ({ onClose }) => {
         { 
           name: 'Effective Labor Rate', 
           icon: 'ri-calculator-line', 
-          description: '3606 Reynolds & Reynolds Report',
-          picture: EffectiveLaborRateImage,
+          description: '3611 Reynolds & Reynolds Report',
+          picture: rr3611report,
         },
         { 
           name: 'Advisor Performance Report', 
